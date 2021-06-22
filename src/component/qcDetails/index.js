@@ -197,7 +197,7 @@ export default function QcDetails({
     <div className="jio">
       <div className="jio_page">
         <div className="jio_row1">
-          <div className="j_row1">Ninja-Cart </div>
+          <div className="j_row1">Rapido </div>
           <div
             className="j_row2 j-row-back-btn"
             onClick={() => {
@@ -223,24 +223,6 @@ export default function QcDetails({
           <div className="jio_row3">
             <div className="j_row3">
               <div className="j_box1">
-                <p className="j_p3">Merchant contact number</p>
-                <p className="j_p4">
-                  {Object.keys(api).length > 0
-                    ? `XXXXXXX${api.merchant_number.substring(7, 10)}`
-                    : "XXXXXXXX01"}
-                </p>
-              </div>
-
-              <div className="call-container">
-                <img
-                  src={window.location.origin + "/images/call.svg"}
-                  alt="call"
-                  className="call_home"
-                />
-              </div>
-            </div>
-            <div className="j_row3">
-              <div className="j_box1">
                 <p className="j_p3">FSE contact number</p>
                 <p className="j_p4">
                   {Object.keys(api).length > 0
@@ -262,11 +244,13 @@ export default function QcDetails({
               <div className="j_row4">
                 <div className="j_row3">
                   <div className="j_box3">
-                    <p className="j_p9">Shop name</p>
+                    <p className="j_p9">
+                      Auto Driver Registered Contact Number
+                    </p>
                     <p className="j_p15">
                       {Object.keys(api).length > 0
                         ? api.shop_name
-                        : "Shop Name"}
+                        : "9158228119"}
                     </p>
                   </div>
                   <div className="j_boxes">
@@ -304,16 +288,17 @@ export default function QcDetails({
                 <div className="row_note1">
                   <p className="note_name">note:</p>
                   <p className="note_stats">
-                    Check and match the shop name with shop image
+                    Check the auto driver registered contact number through
+                    Rapido partner app
                   </p>
                 </div>
               </div>
               <div className="j_row4">
                 <div className="j_row5">
                   <div className="j_box3">
-                    <p className="j_p9">Category</p>
+                    <p className="j_p9">Name</p>
                     <p className="j_p15">
-                      {Object.keys(api).length > 0 ? api.category : "Category"}
+                      {Object.keys(api).length > 0 ? api.category : "Sample Name"}
                     </p>
                   </div>
                   <div className="j_boxes">
@@ -352,143 +337,22 @@ export default function QcDetails({
                 <div className="row_note1">
                   <p className="note_name">note:</p>
                   <p className="note_stats">
-                    Check is this category is matching with the shop image
+                    Check the auto driver name with aadhar card image
                   </p>
                 </div>
               </div>
-              <div className="j_row4">
-                <div className="j_proof">
-                  {/* <p className="j_p9">Merchant aadhar number</p>
-                  <p className="j_p10">1224 5678 9900</p> */}
-                  <div className="j_row6">
-                    <div className="j_col1">
-                      {/* <p className="j_p11">Aadhar front image</p> */}
-                      <div className="j_col2 aadhar-container">
-                        <img
-                          src={`${
-                            Object.keys(api).length > 0
-                              ? `${IMAGES_BASE_URL}/${api.shop_image_1}`
-                              : window.location.origin +
-                                "/images/shop-front.svg"
-                          }`}
-                          alt="shop front"
-                          className="proof_image aadhar-img"
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src =
-                              window.location.origin + "/images/shop-front.svg";
-                          }}
-                          onClick={(e) => {
-                            // setBlur(true);
-                            setImagePreview({
-                              status: true,
-                              url: e.target.src,
-                            });
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="j_col1">
-                      {/* <p className="j_p11">Aadhar back image</p> */}
-                      <div className="j_col2 aadhar-container">
-                        <img
-                          src={`${
-                            Object.keys(api).length > 0
-                              ? `${IMAGES_BASE_URL}/${api.shop_image_2}`
-                              : window.location.origin + "/images/shop-left.svg"
-                          }`}
-                          alt="shop left"
-                          className="proof_image aadhar-img"
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src =
-                              window.location.origin + "/images/shop-left.svg";
-                          }}
-                          onClick={(e) => {
-                            // setBlur(true);
-                            setImagePreview({
-                              status: true,
-                              url: e.target.src,
-                            });
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="j_col1">
-                      {/* <p className="j_p11">Aadhar back image</p> */}
-                      <div className="j_col2 aadhar-container">
-                        <img
-                          src={`${
-                            Object.keys(api).length > 0
-                              ? `${IMAGES_BASE_URL}/${api.shop_image_3}`
-                              : window.location.origin +
-                                "/images/shop-right.svg"
-                          }`}
-                          alt="shop right"
-                          className="proof_image aadhar-img"
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src =
-                              window.location.origin + "/images/shop-right.svg";
-                          }}
-                          onClick={(e) => {
-                            // setBlur(true);
-                            setImagePreview({
-                              status: true,
-                              url: e.target.src,
-                            });
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* <div className="j_row4">
-                <div className="j_proof">
-                  <p className="j_p9">Proof of business image</p>
-                  <p className="j_p10">Provision store/others</p>
-                  <div className="j_row6">
-                    <div className="j_col1">
-                      <p className="j_p11">Shop image</p>
-                      <div className="j_col2">
-                        <div className="j_dotted my-shop-image">
-                          <img
-                            src={window.location.origin + "/images/shop-front.svg"}
-                            alt="shop-image"
-                            className="proof_image"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="j_col1">
-                      <p className="j_p11">Proof of business</p>
-                      <div className="j_col2">
-                        <div className="j_dotted">
-                          <img
-                            src={window.location.origin + "/images/doc.svg"}
-                            alt="proof of business"
-                            className="proof_image"
-                          />
-                        </div>
-                      </div>
-                      <div className="j_row7">
-                        <p className="j_p12">Document format:</p>
-                        <p className="j_p13">Distributor bill</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
               <div className="j_row4">
                 <div className="j_row5">
                   <div className="j_box3">
-                    <p className="j_p9">Merchant aadhar number</p>
+                    <p className="j_p9">Auto driver aadhar number</p>
                     <p className="j_p10">
-                      {Object.keys(api).length > 0
-                        ? api.aadhar_number
-                        : "xxxxxxxxxxxx"}
+                      <b>
+                        {" "}
+                        {Object.keys(api).length > 0
+                          ? api.aadhar_number
+                          : "xxxx xxxx xxxx"}
+                      </b>
                     </p>
                   </div>
                   <div className="j_boxes">
@@ -597,65 +461,134 @@ export default function QcDetails({
                   </div>
                 </div>
               </div>
-              {/* <div className="j_row4">
+
+              {/* vehicle number start */}
+              <div className="j_row4">
                 <div className="j_row5">
                   <div className="j_box3">
-                    <p className="j_p9">MID number</p>
-                    <p className="j_p10">123df4567890346</p>
+                    <p className="j_p9">Vehicle number</p>
+                    <p className="j_p10">
+                      <b>
+                        {" "}
+                        {Object.keys(api).length > 0
+                          ? api.aadhar_number
+                          : "KA28 20011234567"}
+                      </b>
+                    </p>
                   </div>
                   <div className="j_boxes">
-                    <p className="j_yes">yes</p>
-                    <p className="j_yes">no</p>
+                    <p
+                      className="j_yes"
+                      style={{
+                        pointerEvents: `${
+                          yesBtnObj.aadhar === "yes" ? "none" : "auto"
+                        }`,
+                      }}
+                      className={`j_yes ${
+                        yesBtnObj.aadhar === "yes" ? "activeBtn" : ""
+                      }`}
+                      data-label="aadhar"
+                      onClick={updateScore}
+                      value={`YES`}
+                    >
+                      YES
+                    </p>
+                    <p
+                      className="j_yes"
+                      className="j_yes"
+                      style={{
+                        pointerEvents: `${
+                          yesBtnObj.aadhar === "no" ? "none" : "auto"
+                        }`,
+                      }}
+                      className={`j_yes ${
+                        yesBtnObj.aadhar === "no" ? "activeBtn" : ""
+                      }`}
+                      onClick={updateScore}
+                      data-label="aadhar"
+                    >
+                      NO
+                    </p>
                   </div>
                 </div>
                 <div className="row_note1">
                   <p className="note_name">note:</p>
                   <p className="note_stats">
-                    Verify the MID,is this same as in the profile screen
+                    Verify driving licence number with DL images
                   </p>
                 </div>
-              </div> */}
+              </div>
+
+              {/* vehicle number end */}
+
               <div className="j_row4">
                 <div className="j_proof">
-                  {/* <p className="j_p9">Verification Screeshot</p> */}
-                  <p className="j_p14 pvs-text">
-                    Profile Verification Screenshot
-                  </p>
-                  <div className="j_row8">
+                  {/* <p className="j_p9">Merchant aadhar number</p>
+                  <p className="j_p10">1224 5678 9900</p> */}
+                  <div className="j_row6">
                     <div className="j_col1">
-                      <div className="j_col2">
-                        <div className="j_dotted my-shop-image">
-                          <img
-                            src={`${
-                              Object.keys(api).length > 0
-                                ? `${IMAGES_BASE_URL}/${api.profile_verification_image}`
-                                : window.location.origin +
-                                  "/images/profile-verification.svg"
-                            }`}
-                            alt="profile verfication"
-                            className="proof_image"
-                            onError={(e) => {
-                              e.target.onerror = null;
-                              e.target.src =
-                                window.location.origin +
-                                "/images/profile-verification.svg";
-                            }}
-                            onClick={(e) => {
-                              // setBlur(true);
-                              setImagePreview({
-                                status: true,
-                                url: `${e.target.src}`,
-                              });
-                            }}
-                          />
-                        </div>
+                      <p className="j_p11">DL front image</p>
+                      <div className="j_col2 aadhar-container">
+                        <img
+                          src={`${
+                            Object.keys(api).length > 0
+                              ? `${IMAGES_BASE_URL}/${api.aadhar_front_image}`
+                              : window.location.origin +
+                                "/images/DL-front.svg"
+                          }`}
+                          alt="aadhar front"
+                          className="proof_image aadhar-img"
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src =
+                              window.location.origin +
+                              "/images/DL-front.svg";
+                          }}
+                          onClick={(e) => {
+                            // setBlur(true);
+                            setImagePreview({
+                              status: true,
+                              url: e.target.src,
+                            });
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div className="j_col1">
+                      <p className="j_p11">DL back image</p>
+                      <div className="j_col2 aadhar-container">
+                        <img
+                          src={`${
+                            Object.keys(api).length > 0
+                              ? `${IMAGES_BASE_URL}/${api.aadhar_back_image}`
+                              : window.location.origin +
+                                "/images/DL-back.svg"
+                          }`}
+                          alt="aadhar back"
+                          className="proof_image aadhar-img"
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src =
+                              window.location.origin +
+                              "/images//DL-back.svg";
+                          }}
+                          onClick={(e) => {
+                            // setBlur(true);
+                            setImagePreview({
+                              status: true,
+                              url: e.target.src,
+                            });
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              
+              
             </div>
-            <div className="jio_col2">
+            <div className="jio_col2 my-col2">
               <div className="jio_note">
                 <p className="j_p6">remarks</p>
                 <div className="j_p8">
@@ -747,23 +680,6 @@ export default function QcDetails({
                     value="Reject"
                     onClick={rejectFunc}
                     disabled={qcScore === 100 || comment.trim().length === 0}
-                  />
-                  <input
-                    type="button"
-                    className={`qcScoreBtn j_button ${
-                      qcScore < 100 &&
-                      !fakeOnBoarding &&
-                      !(comment.trim().length === 0)
-                        ? "activateQcScoreBtn"
-                        : ""
-                    }`}
-                    value="Redo"
-                    disabled={
-                      qcScore === 100 ||
-                      comment.trim().length === 0 ||
-                      fakeOnBoarding
-                    }
-                    onClick={redoFunc}
                   />
                 </div>
               </div>

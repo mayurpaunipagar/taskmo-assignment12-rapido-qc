@@ -21,7 +21,7 @@ export default function Home() {
       <div className="jio">
         <div className="jio_page home-jio_page">
           <div className="jio_row1">
-            <div className="j_row1">Ninja-Cart </div>
+            <div className="j_row1">Rapido </div>
             <div className="j_row2 j-row-back-btn " onClick={()=>{
               history.push("/home");
             }}>
