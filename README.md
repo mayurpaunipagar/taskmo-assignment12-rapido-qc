@@ -1,7 +1,7 @@
 # Quality Check Ninja Cart
 
 ## Application
-### 
+### https://kpwv2.csb.app
 
 
 ## Design in AdobeXD
@@ -10,7 +10,7 @@
 
 
 ## Codesandbox link
-### 
+### https://codesandbox.io/s/kpwv2
 
 
 ## Available Scripts
